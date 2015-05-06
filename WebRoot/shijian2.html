@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>后台管理系统</title>
+	
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+   <!-- Bootstrap -->
+    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<style type="text/css">
+		body{
+			padding-top: 50px;
+			padding-bottom: 40px;
+		}
+		.sidebar{
+			border-right: 1px solid #eee;
+			background-color: #ddd;
+			position:fixed;
+			bottom: 0;
+            left: 0;
+            top: 50px;
+            padding: 20px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            display: block;
+		}
+		.nav-sidebar{
+			margin-right: -20px;
+			margin-left: -20px;
+			margin-bottom: 20px;
+		}
+		.nav-sidebar > .active > a,
+        .nav-sidebar > .active > a:hover,
+        .nav-sidebar > .active > a:focus {
+            color: #fff;
+            background-color: #428bca;
+        }
+        .main{
+        	overflow-x: hidden;
+        	overflow-y: auto;
+        	display: block;
+        }
+        .z1{
+          height:400px;
+         
+        }
+        .z2{
+           height:300px;
+        }
+	</style>
+  </head>
+  
+  <body>
+    <!-- 1 导航 -->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+	  <div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#demo-navbar">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">管理控制系统</a>
+	    </div>
+	
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="demo-navbar">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">功能<span class="caret"></span></a>
+	          <ul class="dropdown-menu" role="menu">
+	          	<li class="dropdown-header">页面功能</li>
+	            <li><a href="#">信息建立</a></li>
+				<li><a href="#">信息查询</a></li>
+				<li><a href="#">信息管理</a></li>
+				<li class="divider"></li>
+				<li class="dropdown-header">系统功能</li>
+				<li><a href="#">设置</a></li>
+	          </ul>
+	        </li>	          
+	        <li><a href="#" data-toggle="modal" data-target="#about">关于</a></li>	      
+	      </ul>
+	       <form class="navbar-form navbar-right" role="login">
+	        <div class="form-group">
+	          <input type="text" class="form-control" placeholder="Username">
+	        </div>
+	        <div class="form-group">
+	          <input type="password" class="form-control" placeholder="password">
+	        </div>
+	        <button type="submit" class="btn btn-default">登陆</button>
+	      </form>	  
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container -->
+	</nav>
+    
+    <div class="contain-fluid main">
+    	<div class="row">
+    		<!-- 2 左侧导航栏 -->
+    		<div class="col-md-2 col-sm-3 sidebar">
+    			<ul class="nav nav-sidebar">
+    				<li class="active"><a href="#">首页</a></li>
+    			</ul>
+    			<ul class="nav nav-sidebar">
+    				<li><a href="#">信息建立</a></li>
+    				<li><a href="#">信息查询</a></li>
+    				<li><a href="#">信息修改</a></li>
+    			</ul>
+    			<ul class="nav nav-sidebar">
+    				<li><a href="#">帮助</a></li>
+    			</ul>
+    			<ul class="nav nav-sidebar">
+    				<li><a href="#">设置</a></li>
+    			</ul>
+    		</div>
+    		<!-- 3 右侧主窗口 -->
+    		<div class="col-md-10 col-md-offset-2 col-sm-9 main">
+    			<h1 class="page-header">管理控制台</h1>
+    			<p>
+	    			<button type="button" class="btn btn-lg btn-default">按钮1</button>
+	    			<button type="button" class="btn btn-lg btn-primary">按钮2</button>
+	    			<button type="button" class="btn btn-lg btn-success">按钮3</button>
+	    		</p>
+	    		<div class="row z1">
+	    			<div class="col-md-6">
+			    		<div class="panel panel-primary">
+						  <div class="panel-heading">最新提醒</div>
+						  <div class="panel-body">
+						    <div class="alert alert-success" role="alert">
+						    	<p><strong>提醒</strong>&nbsp;成功</p>
+						    </div>
+							<div class="alert alert-info" role="alert">
+								<p><strong>提醒</strong>&nbsp;信息</p>
+							</div>
+							<div class="alert alert-warning" role="alert">
+								<p><strong>提醒</strong>&nbsp;警告</p>
+							</div>
+							<div class="alert alert-danger" role="alert">
+								<p><strong>提醒</strong>&nbsp;危险</p>
+							</div>
+						  </div>
+						</div>
+	    			</div>
+	    			<div class="col-md-5">
+	    				<div class="panel panel-primary">
+						  <div class="panel-heading">我的任务</div>
+						  <div class="panel-body">
+						    <ul class="nav nav-pills nav-stacked" role="tablist">
+								<li role="presentation">
+									<a href="#" class="alert alert-info">
+									<span class="badge pull-right">42</span>
+									订单审批
+									</a>
+								</li>
+								<li role="presentation">
+									<a href="#" class="alert alert-info">
+									<span class="badge pull-right">20</span>
+									收款确认
+									</a>
+								</li>
+								<li role="presentation">
+									<a href="#" class="alert alert-info">
+									<span class="badge pull-right">10</span>
+									付款确认
+									</a>
+								</li>
+							</ul>
+						  </div>
+						</div>
+	    			</div>
+	    		</div>
+	    		<div class="row z2">
+	    			<div class="col-md-6">
+			    		<div class="panel panel-primary">
+						  <div class="panel-heading">最新订单</div>
+						  	  <!-- Table -->
+							  <table class="table table-striped">
+							  	<thead>
+									<tr>
+										<th>#</th>
+										<th>产品</th>
+										<th>数量</th>
+										<th>总金额</th>
+										<th>业务员</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Apple Macbook air</td>
+										<td>10</td>
+										<td>80000</td>
+										<td>王小贱</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Apple iPad air</td>
+										<td>20</td>
+										<td>65000</td>
+										<td>尹开花</td>
+									</tr>
+								</tbody>
+							  </table>
+						</div>
+	    			</div>
+	    			<div class="col-md-5">
+	    				<div class="panel panel-primary">
+						  <div class="panel-heading">工程进度</div>
+						  <div class="panel-body">
+						    <h3><span class="label label-primary">水井挖掘工程</span></h3>
+							<div class="progress">
+								<div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60"
+								 aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span>60% Complete</span>
+								</div>						
+						    </div>
+						    <h3><span class="label label-danger">基建工程</span></h3>
+						    <div class="progress">
+								  <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80"
+								      aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+								    <span class="sr-only">80% Complete (danger)</span>
+								  </div>
+						    </div>
+						</div>
+	    			</div>
+	    		</div>
+    		</div>
+    	</div>
+      </div>
+    </div>
+   
+    <!-- 弹出框 -->
+	    <div class="modal fade" id="about">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title">关于</h4>
+		      </div>
+		      <div class="modal-body">
+		            <p>1.搭建基础的bootstrap页面</p>
+					<p>2.根据课程所学或官方文档先建立好导航条和基础栅格布局（左右两列）</p>
+					<p>3.左列制作成左侧导航，注意添加样式</p>
+					<p>4.右列是管理控制台，添加标题、按钮和下面的面板内容，内容为2列布局，面板使用bootstrap的panel</p>
+					<p>5.在面板中添加警告框、表格、徽章导航、进度条等多个组件</p>
+					<p>6.任务完成后，可以根据自己的想象，添加更多的组件</p>
+		      </div>
+		      <div class="modal-footer">		
+		        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="plugins/jquery/jquery-1.11.2.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
