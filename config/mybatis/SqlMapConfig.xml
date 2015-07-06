@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<!-- 全局配置参数，需要时再设置 -->
+	<settings>
+		<!--延迟加载配置  -->
+		<setting name="lazyLoadingEnabled" value="true"/>
+		<setting name="aggressiveLazyLoading" value="false"/>
+		
+	</settings> 
+	
+	<!-- 别名定义 -->
+	<typeAliases>
+		<!-- 	加载多个包，多用几个package-->	
+		<package name="com.xxx.elec.po"/> 		
+	</typeAliases>
+	
+	<!-- 加载 映射文件 -->
+	<mappers>
+		<!-- 批量加载mapper
+			使用spring中进行扫描
+			但是mapper.xml 与mapper.java 在同一目录
+		 -->
+		 <!-- <package name="cn.xxx.mapper"/> -->
+	</mappers>
+	
+</configuration>

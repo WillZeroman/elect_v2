@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xxx.elec.mapper.ElecCommonMsgMapper" >
+  <resultMap id="BaseResultMap" type="com.xxx.elec.po.ElecCommonMsg" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="stationRun" property="stationrun" jdbcType="VARCHAR" />
+    <result column="devRun" property="devrun" jdbcType="VARCHAR" />
+    <result column="createDate" property="createdate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from elec_ccommonmsg
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  
+  <insert id="insert" parameterType="com.xxx.elec.po.ElecCommonMsg" >
+    insert into elec_ccommonmsg (id, stationRun, devRun, 
+      createDate)
+    values (#{id,jdbcType=VARCHAR}, #{stationrun,jdbcType=VARCHAR}, #{devrun,jdbcType=VARCHAR}, 
+      #{createdate,jdbcType=TIMESTAMP})
+  </insert>
+  
+  <update id="updateByPrimaryKey" parameterType="com.xxx.elec.po.ElecCommonMsg" >
+    update elec_ccommonmsg
+    set stationRun = #{stationrun,jdbcType=VARCHAR},
+      devRun = #{devrun,jdbcType=VARCHAR},
+      createDate = #{createdate,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select id, stationRun, devRun, createDate
+    from elec_ccommonmsg
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, stationRun, devRun, createDate
+    from elec_ccommonmsg
+  </select>
+</mapper>

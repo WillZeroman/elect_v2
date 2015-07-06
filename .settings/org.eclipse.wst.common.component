@@ -3,6 +3,8 @@
     <wb-module deploy-name="elect_v2">
         <wb-resource deploy-path="/" source-path="/WebRoot"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/config"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/test"/>
         <property name="context-root" value="/elect_v2"/>
         <property name="java-output-path" value="/elect_v2/WebRoot/WEB-INF/classes"/>
     </wb-module>
