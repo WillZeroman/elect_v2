@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bootstrap Admin Template</title>
+    <title>Electric Network System</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
@@ -38,7 +38,7 @@
 	           <div class="col-md-5">
 	              <!-- Logo -->
 	              <div class="logo">
-	                 <h1><a href="shijianTemplate.html">Bootstrap Admin Theme</a></h1>
+	                 <h1><a href="main.html">Electric Management System</a></h1>
 	              </div>
 	           </div>
 	           <div class="col-md-5">
@@ -88,15 +88,15 @@
                     <li><a href="#"><i class="glyphicon glyphicon-tasks"></i> Forms</a></li>
                     <li class="submenu">
                          <a href="#">
-                            <i class="glyphicon glyphicon-list"></i>&nbsp;系统管理
+                            <i class="glyphicon glyphicon-list"></i>系统管理
                             <span class="caret pull-right"></span>
                          </a>
                          <!-- Sub menu -->
                          <ul>
-                            <li><a target="#"><i class="glyphicon glyphicon-pencil"></i>&nbsp;用户管理</a></li>
-                            <li><a target="#"><i class="glyphicon glyphicon-pencil"></i>&nbsp;角色管理</a></li>
-                            <li><a target="#"><i class="glyphicon glyphicon-pencil"></i>&nbsp;日志管理</a></li>
-                            <li><a target="#"><i class="glyphicon glyphicon-pencil"></i>&nbsp;代办事宜</a></li>
+                            <li><a href="#" target="userManagement"><i class="glyphicon glyphicon-pencil"></i>用户管理</a></li>
+                            <li><a href="#" target="roleManagement"><i class="glyphicon glyphicon-pencil"></i>角色管理</a></li>
+                            <li><a href="#" target="logManagement"><i class="glyphicon glyphicon-pencil"></i>日志管理</a></li>
+                            <li><a href="commonMsg.html"><i class="glyphicon glyphicon-pencil"></i>代办事宜</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -189,14 +189,13 @@
 		</div>
     </div>
 
-  <!--   <footer>
+<!--      <footer>
          <div class="container">       
             <div class="copy text-center">
                Copyright 2015 <a href='#'>Website</a>
             </div>           
          </div>
-    </footer> -->
-
+    </footer>  -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="plugins/jquery/jquery-1.11.2.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -208,21 +207,21 @@
 	   		//alert(data);
 	   		//alert($(data).find("#main").length);
 	  		$("#mainframe").html($(data).find("#main"));
-	  	}); 
-	  	$(".submenu ul li").click(function(){
+	  	}); */
+	  	/*$(".submenu ul li").click(function(){
 	  		var $this = $(this);
 	  		var _clickTab = $this.find("a").attr("target");
 	  		alert(_clickTab);
-	  		/* $.get(_clickTab,function(data){
+	  	    $.get(_clickTab,function(data){
 	  	   		alert(data);
 	   			alert($(data).find(".container").length);
 		  		$("#mainframe").html($(data).find("#mainframe"));
 		  	}); 
-		  	$("#mainframe").load(_clickTab+" .container",function(){
-		  		var temp = _clickTab.split(".")
+		  	 $("#mainframe").load(_clickTab+" .container",function(){
+		  		var temp = _clickTab.split(".");
 		  		$.getScript(temp[0]+".js");
 		  	});
-	  	}); */
+	  	});  */ 
 	  });
    </script>
   </body>
